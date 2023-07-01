@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux_test/StateManager/appState.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +23,9 @@ class _Page1State extends State<Page1> {
 
     AppState appState = Provider.of<AppState>(context);
 
-    print("reload");
+    if (kDebugMode) {
+      print("reload");
+    }
 
     return Scaffold(
       appBar: AppBar(

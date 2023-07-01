@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,7 +15,10 @@ class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     AppState appState = Provider.of<AppState>(context);
-    print("reload 2");
+
+    if (kDebugMode) {
+      print("reload 2");
+    }
 
     return Scaffold(
       appBar: AppBar(
